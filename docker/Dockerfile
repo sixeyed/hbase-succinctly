@@ -12,7 +12,7 @@ RUN ./install-hbase.sh
 ADD hbase-site.xml /opt/hbase/conf/hbase-site.xml
 ADD start-hbase-all.sh /opt/hbase/bin/start-hbase-all.sh
 
-RUN mkdir/hbase-scripts
+RUN mkdir /hbase-scripts
 ADD hbase-scripts /hbase-scripts
 
 # for a list of all the HBase ports, see http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/ 
