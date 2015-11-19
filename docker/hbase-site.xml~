@@ -23,8 +23,4 @@
         <name>hbase.regionserver.ipc.address</name>
         <value>0.0.0.0</value>
     </property>
-    <property>
-        <name>hbase.zookeeper.quorum</name>
-        <value>127.0.0.1</value>
-    </property>
 </configuration>
