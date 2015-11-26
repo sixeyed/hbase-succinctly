@@ -1,0 +1,9 @@
+Sample code for Syncfusion's HBase Succinctly eBook, Chapter 5 - Connecting with Python and Thrift.
+
+To try this out locally, the easiest way is with Docker. Install Docker, run a container from the public image, and run the HBase shell script to insert test data:
+
+* docker run -d -p 2181:2181 -p 60010:60010 -p 60000:60000  -p 60020:60020 -p 60030:60030  -p 8080:8080 -p 8085:8085  -p 9090:9090 -p 9095:9095  --name hbase -h hbase  sixeyed/hbase-succinctly
+
+* docker exec -it hbase hbase shell /hbase-scripts/setup.hbsh
+
+The sample code uses the (HappyBase)[https://happybase.readthedocs.org/en/latest/] library, which wraps the Thrift API from HBase. 
