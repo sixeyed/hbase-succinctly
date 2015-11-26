@@ -205,3 +205,14 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
+# NetBeans
+
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
+
+/java/target/
