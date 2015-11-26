@@ -35,5 +35,5 @@ WORKDIR /opt/hbase/bin
 
 ENV PATH=$PATH:/opt/hbase/bin
 
-# run in pseudo-distributed mode with Stargate & Thrift, and start the HBase Shell
+# run in pseudo-distributed mode with Stargate & Thrift:
 CMD /opt/hbase/bin/start-hbase-all.sh
