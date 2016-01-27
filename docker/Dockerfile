@@ -20,6 +20,7 @@ ADD hbase-scripts /hbase-scripts
 # Servers
 EXPOSE 60000
 EXPOSE 60020
+EXPOSE 2181
 
 # APIs
 EXPOSE 8080
