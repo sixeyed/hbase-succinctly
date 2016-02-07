@@ -1,0 +1,45 @@
+create 'device-events', 'e', 'm'
+
+
+put 'device-events', 'uuid|20160128', 'e:n', 'power.off'
+
+put 'device-events', 'uuid|20160128', 'e:t', '1453564612'
+
+put 'device-events', 'uuid|20160128', 'e:p', '{"other":"json"}'
+
+put 'device-events', 'uuid|20160128', 'm:d', 'uuid'
+
+put 'device-events', 'uuid|20160128', 'm:v', '1.0.0'
+
+put 'device-events', 'uuid|20160128', 'm:u', 'elton'
+
+
+put 'device-events', 'uuid2', 'e:n', 'power.off'
+
+put 'device-events', 'uuid2', 'e:t', '1453564612'
+
+put 'device-events', 'uuid2', 'e:p', '{"other":"json"}'
+
+put 'device-events', 'uuid2', 'm:d', 'uuid'
+
+put 'device-events', 'uuid2', 'm:v', '1.0.0'
+
+put 'device-events', 'uuid2', 'm:u', 'elton'
+
+
+put 'device-events', 'uuid3|20160128', 'e:t', '1453564612'
+
+put 'device-events', 'uuid3|20160128', 'e:p', '{"more":"json"}'
+
+put 'device-events', 'uuid3|20160128', 'm:d', 'uuid'
+
+put 'device-events', 'uuid2', 'm:v', '1.0.0'
+
+put 'device-events', 'uuid3|20160128', 'm:u', 'elton'
+
+
+create 'hbase-table', 'cf1'
+
+put 'hbase-table', 'rk1', 'cf1:data', 'v1'
+
+exit

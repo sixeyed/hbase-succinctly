@@ -1,7 +1,7 @@
-FROM java:7
+FROM sixeyed/hadoop-succinctly:2.7.2
 MAINTAINER Elton Stoneman <elton@sixeyed.com>
 
-ENV JAVA_HOME=/usr
+ENV HBASE_HOME=/opt/hbase
 
 RUN mkdir /hbase-setup
 WORKDIR /hbase-setup
@@ -12,10 +12,11 @@ RUN ./install-hbase.sh
 ADD hbase-site.xml /opt/hbase/conf/hbase-site.xml
 ADD start-hbase-all.sh /opt/hbase/bin/start-hbase-all.sh
 
-RUN mkdir /hbase-scripts
-ADD hbase-scripts /hbase-scripts
+ADD setup-hdfs.sh /hbase-setup/
+RUN ./setup-hdfs.sh
 
-# for a list of all the HBase ports, see http://blog.cloudera.com/blog/2013/07/guide-to-using-apache-hbase-ports/ 
+RUN mkdir /tmp/sample-data
+ADD ./sample-data/ /tmp/sample-data/
 
 # Servers
 EXPOSE 60000

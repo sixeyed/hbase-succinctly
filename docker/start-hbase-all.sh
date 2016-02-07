@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# Hadoop
+service ssh start
+$HADOOP_HOME/etc/hadoop/hadoop-env.sh
+$HADOOP_HOME/sbin/start-dfs.sh
+
 # HBase servers:
-/opt/hbase/bin/hbase-daemon.sh start zookeeper
-/opt/hbase/bin/hbase-daemon.sh start regionserver
-/opt/hbase/bin/hbase-daemon.sh start master
+$HBASE_HOME/bin/hbase-daemon.sh start zookeeper
+$HBASE_HOME/bin/hbase-daemon.sh start master
+$HBASE_HOME/bin/hbase-daemon.sh start regionserver
 
 # Thrift:
-/opt/hbase/bin/hbase-daemon.sh start thrift
+$HBASE_HOME/bin/hbase-daemon.sh start thrift
 
 # Stargate:
-/opt/hbase/bin/hbase rest start
+$HBASE_HOME/bin/hbase rest start

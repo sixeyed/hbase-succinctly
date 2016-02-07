@@ -36,3 +36,4 @@ create 'counters', 'c'
 
 incr 'counters', 'rk1', 'c:1'
 
+exit
