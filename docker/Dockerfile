@@ -7,12 +7,15 @@ RUN mkdir /hbase-setup
 WORKDIR /hbase-setup
 
 ADD install-hbase.sh /hbase-setup/
+RUN chmod +x ./install-hbase.sh
 RUN ./install-hbase.sh
 
 ADD hbase-site.xml /opt/hbase/conf/hbase-site.xml
 ADD start-hbase-all.sh /opt/hbase/bin/start-hbase-all.sh
+RUN chmod +x /opt/hbase/bin/start-hbase-all.sh
 
 ADD setup-hdfs.sh /hbase-setup/
+RUN chmod +x ./setup-hdfs.sh
 RUN ./setup-hdfs.sh
 
 RUN mkdir /tmp/sample-data
